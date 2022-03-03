@@ -18,6 +18,26 @@ body {
   list-style-type: none;
 }
 
+.mainsearch {
+  display: flex;
+  justify-content: space-between;
+}
+.mainsearch_research-bar {
+  width: 100%;
+  height: 69px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #E7E7E7;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
+.mainsearch_search-label {
+  position: absolute;
+  padding-top: 17.5px;
+  right: 9.5%;
+}
+
 h1 {
   font-family: "DM Sans";
 }

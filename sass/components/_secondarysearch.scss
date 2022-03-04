@@ -1,0 +1,38 @@
+.secondarysearch {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 15px;
+}
+
+.search {
+    &_ingredient {
+        @include searchCombox;
+        @include searchComboxProperties;
+        background-color: $ingredient-color;
+    }
+    &_device {
+        @include searchCombox;
+        @include searchComboxProperties;
+        background-color: $device-color;
+    }
+    &_ustensils {
+        @include searchCombox;
+        @include searchComboxProperties;
+        background-color: $ustensils-color;
+    }
+}
+
+#ingredient {
+    background-color: $ingredient-color;
+    @include searchComboxInput;
+}
+
+#device {
+    background-color: $device-color;
+    @include searchComboxInput;
+}
+
+#ustensils {
+    background-color: $ustensils-color;
+    @include searchComboxInput;
+}

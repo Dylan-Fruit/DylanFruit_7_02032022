@@ -1,0 +1,44 @@
+@mixin searchCombox {
+    border-radius: 5px;
+    display: flex;
+    width: 170px;
+    height: 69px;
+    font-family: "lato";
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+@mixin searchComboxInput {
+    font-family: "lato";
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    margin: 0 25px 0 15px;
+    width: 65%;
+    border: none;
+    outline: none;
+}
+
+@mixin searchComboxProperties {
+    &-combox {
+        width: 100%;
+        &-searchfield {
+            position: relative;
+            &-chevron {
+                position: absolute;
+                top: 5px;
+                right: 18px;
+            }
+        }
+        &-searchfieldLabel {
+            cursor: text;
+            margin: 0 25px 0 15px;
+        }
+    }
+}

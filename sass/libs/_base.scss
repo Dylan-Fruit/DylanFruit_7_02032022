@@ -16,22 +16,3 @@ body {
   list-style-type: none;
 }
 
-.mainsearch {
-  display: flex;
-  justify-content: space-between;
-  &_research-bar {
-    width: 100%;
-    height: 69px;
-    border-radius: 5px;
-    outline: none;
-    background-color: $searchbar-color;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-  }
-  &_search-label { 
-    position: absolute;
-    padding-top: 17.5px;
-    right: 9.5%;
-  }
-}

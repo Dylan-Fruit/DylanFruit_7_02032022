@@ -42,3 +42,26 @@
         }
     }
 }
+
+@mixin searchComboxList {
+            display: none;
+            height: 300px;
+            flex-wrap: wrap;
+            max-height: 250px;
+            overflow: scroll;
+            margin-top: 20px;
+            position: absolute;
+            max-width: 667px;
+            border-radius: 0 0 5px 5px;
+            padding: 13px;
+            column-gap: 50px;
+            row-gap: 10px;
+            li {
+                display: block;
+                width: 180px;
+                height: 35px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+}

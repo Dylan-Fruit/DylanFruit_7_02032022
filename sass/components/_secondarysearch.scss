@@ -1,7 +1,17 @@
 .secondarysearch {
     display: flex;
     column-gap: 20px;
-    margin-top: 15px;
+    margin-top: 30px;
+}
+
+.recipeTags {
+    display: none;
+}
+
+.test {
+    overflow: initial;
+    text-overflow: initial;
+    white-space: normal;
 }
 
 .search {
@@ -9,16 +19,28 @@
         @include searchCombox;
         @include searchComboxProperties;
         background-color: $ingredient-color;
+        &-combox-list{
+            @include searchComboxList;
+            background-color: $ingredient-color;
+        }
     }
     &_device {
         @include searchCombox;
         @include searchComboxProperties;
         background-color: $device-color;
+        &-combox-list {
+            @include searchComboxList;
+            background-color: $device-color;
+        }
     }
     &_ustensils {
         @include searchCombox;
         @include searchComboxProperties;
         background-color: $ustensils-color;
+        &-combox-list {
+            @include searchComboxList;
+            background-color: $ustensils-color;
+        }
     }
 }
 

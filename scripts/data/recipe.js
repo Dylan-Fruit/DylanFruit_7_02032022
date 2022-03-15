@@ -25,6 +25,7 @@ const recipes = [
         },
         {
           ingredient: "Glaçons",
+          quantity: 2,
         },
       ],
       time: 10,

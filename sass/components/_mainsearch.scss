@@ -10,6 +10,8 @@
       border: none;
       padding: 10px;
       font-size: 18px;
+      font-family: "Lato";
+      font-weight: 400;
     }
     &_search-label { 
       position: absolute;
@@ -17,7 +19,15 @@
       right: 19%;
     }
   }
+
+  #research::placeholder {
+    opacity: 0.25;
+  }
   
   .no-result {
     display: none;
+    font-family: "DM Sans";
+    font-size: 25px;
+    color: $primary-color;
+    margin-top: 25px;
   }

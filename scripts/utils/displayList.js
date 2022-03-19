@@ -1,8 +1,7 @@
 export default function displayList(){
 
     // Fonction pour ouvrir les listes d'ingrédients, d'appareils et d'ustensiles
-    const showList = (type) =>{
-        const body = document.querySelector("body");
+    const showList = (type) => {
         const searchBox = document.querySelector(`.search_${type}`);
         const searchCombox = document.querySelector(`.search_${type}-combox`);
         const searchInput = document.getElementById(`${type}`);
@@ -10,12 +9,8 @@ export default function displayList(){
         const chevron = document.querySelector(`.search_${type}-combox-searchfield-chevron`);
         const searchList = document.querySelector(`.search_${type}-combox-list`);
 
-        if(body.style.width <= "769px") {
-            searchBox.style.width = "100%";
-            searchBox.style.maxWidth = "667px";
-        }
-
-        searchBox.style.aligItems = "start";
+        searchBox.style.width = "100%";
+        searchBox.style.maxWidth = "667px";
         searchInput.style.display = "block";
         searchList.style.display = "flex";
         searchFieldLabel.style.display = "none";
@@ -33,7 +28,6 @@ export default function displayList(){
     
         searchBox.style.width = "170px";
         searchBox.style.height = "69px";
-        searchBox.style.aligItems = "center";
         searchInput.style.display = "none";
         searchList.style.display = "none";
         searchFieldLabel.style.display = "block";

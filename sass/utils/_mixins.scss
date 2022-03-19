@@ -49,9 +49,9 @@
             flex-wrap: wrap;
             max-height: 250px;
             overflow: scroll;
-            margin-top: 20px;
+            margin-top: 19px;
             position: absolute;
-            max-width: 667px;
+            width: 667px;
             border-radius: 0 0 5px 5px;
             padding: 13px;
             column-gap: 50px;
@@ -59,9 +59,24 @@
             li {
                 display: block;
                 width: 180px;
-                height: 35px;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
             }
+}
+
+@mixin tagsProperties {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    font-family: "lato";
+    font-size: 14px;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px 55px 10.5px 20px;
+    &-button {
+        position: absolute;
+        right: 22px;
+        cursor: pointer;
+    }
 }

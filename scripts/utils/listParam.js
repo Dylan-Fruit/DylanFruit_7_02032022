@@ -1,85 +1,91 @@
-import { findIngredients, UstensilFind, recipeContainer } from "./secondarysearch";
+import { findIngredients, findUstensils, recipeContainer } from "./secondarysearch.js";
 
-function listReset() {
-    const allList = document.querySelectorAll(".ingredient-list,.device-list,.ustensils-list");
+function resetLists() {
+    const AllListItem = document.querySelectorAll(
+        ".ingredient-list,.device-list,.ustensils-list"
+    );
 
-    const allListArray = Array.from(allList);
-    allListArray.forEach((element) => {
+    const AllListItemArray = Array.from(AllListItem);
+
+    AllListItemArray.forEach((element) => {
         const object = element;
+
         object.style.display = "none";
     });
 }
 
-function searchInput(input, type) {
-    const list = document.querySelector(`${type}-list`);
+function updateListViaSearchInput(input, type) {
+    const list = document.querySelectorAll(`.${type}-list`);
     const listArray = Array.from(list);
+
     listArray.forEach((element) => {
+        const object = element;
         object.style.display = "none";
-        if(element.innerText.toLocaleLowerCase().includes(input.toLocaleLowerCase())) {
+        if (element.innerText.toLocaleLowerCase().includes(input.toLocaleLowerCase())) {
             object.style.display = "block";
         }
     });
 }
 
-function allListUpdate(recipe){
+function updateLists(recipe) {
     const ingredientList = document.querySelectorAll(".ingredient-list");
     const deviceList = document.querySelectorAll(".device-list");
-    const ustensilsList = document.querySelectorAll("ustensils-list");
+    const ustensilsList = document.querySelectorAll(".ustensils-list");
 
-    const ingredientArray = Array.from(ingredientList);
-    const deviceArray = Array.from(deviceList);
-    const ustensilsArray = Array.from(ustensilsList);
+    const ingredientListArray = Array.from(ingredientList);
+    const deviceListArray = Array.from(deviceList);
+    const ustensilsListArray = Array.from(ustensilsList);
 
-    ingredientArray.forEach((element) => {
+    ingredientListArray.forEach((element) => {
         const listText = element.innerText;
         const object = element;
 
-        if(findIngredients(recipe, listText)) {
-            object.style.display = "block"
-        }
-    });
-
-    deviceArray.forEach((element) => {
-        const listText = element.innerText;
-        const object = element;
-
-        if(listText.toLocaleLowerCase().includes(recipe.appliance.toLocaleLowerCase()) && recipe.appliance.length === listText.length){
+        if (findIngredients(recipe, listText)) {
             object.style.display = "block";
         }
     });
 
-    ustensilsArray.forEach((element) => {
-        const listText = element.innerText; 
+    deviceListArray.forEach((element) => {
+        const listText = element.innerText;
         const object = element;
 
-        if(UstensilFind(recipe, listText)){
+        if (listText.toLocaleLowerCase().includes(recipe.appliance.toLocaleLowerCase()) &&recipe.appliance.length === listText.length) {
+            object.style.display = "block";
+        }
+    });
+
+    ustensilsListArray.forEach((element) => {
+        const listText = element.innerText;
+        const object = element;
+
+        if (findUstensils(recipe, listText)) {
             object.style.display = "block";
         }
     });
 }
 
-function displayTags(type, dataOnClick){
-    const actualTags = document.getElementsByClassName(`recipeTags_${type}`);
-    const actualTagsArray = Array.from(actualTags);
+function displayTags(type, dataOnClick) {
+    const existingTag = document.getElementsByClassName(`recipeTags_${type}`);
 
-    actualTagsArray.forEach((element) => {
-        if(element.innerText.replace(/\s+/g, "") === dataOnClick.replace(/\s+/g, "")){
+    const existingTagArray = Array.from(existingTag);
+
+    existingTagArray.forEach((element) => {
+        if (element.innerText.replace(/\s+/g, "") === dataOnClick.replace(/\s+/g, "")) {
             const object = element;
             object.style.display = "block";
         }
     });
 }
-
-function deleteTagsData(element, container){
+function removeTags(element, box) {
     const object = element;
     object.parentElement.style.display = "none";
     const tagName = object.parentElement.innerText.replace(/\s+/g, "");
-    container.forEach((item) => {
-        if(item.replace(/\s+/g, "") === tagName){
+    box.forEach((item) => {
+        if (item.replace(/\s+/g, "") === tagName) {
             let i = 0;
-            while(i < container.length){
-                if(container[i] === item){
-                    container.splice(i, 1);
+            while (i < box.length) {
+                if (box[i] === item) {
+                    box.splice(i, 1);
                     recipeContainer.length = 0;
                 } else {
                     i += 1;
@@ -88,5 +94,4 @@ function deleteTagsData(element, container){
         }
     });
 }
-
-export { listReset, searchInput, allListUpdate, displayTags, deleteTagsData };
+export { resetLists, updateListViaSearchInput, updateLists, displayTags, removeTags };

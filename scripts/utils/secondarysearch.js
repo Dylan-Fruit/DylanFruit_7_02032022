@@ -1,25 +1,28 @@
-const inputContainer = [];
-const ingredientContainer = [];
-const applianceContainer = []; 
-const ustensilContainer = [];
-const recipeContainer = [];
-
-function findIngredients(recipe, list){
-    if(recipe.ingredients.find((ingred) => ingred.ingredient.toLocaleLowerCase().includes(list.toLocaleLowerCase()) && ingred.ingredient.length === list.length))
-    return true;
+function findIngredients(recipe, listText) {
+    if(recipe.ingredients.find((ingre) => ingre.ingredient.toLocaleLowerCase().includes(listText.toLocaleLowerCase()) && ingre.ingredient.length === listText.length))
+      return true;
     return false;
-}
+  }
+  
 
-function findIngredientsOpen(recipe, list){
-    if(recipe.ingredients.find((ingred) => ingred.ingredient.toLocaleLowerCase().includes(list.toLocaleLowerCase())))
-    return true;
+  function findOpenedIngredients(recipe, listText) {
+    if(recipe.ingredients.find((ingre) => ingre.ingredient.toLocaleLowerCase().includes(listText.toLocaleLowerCase())))
+      return true;
     return false;
-}
-
-function findUstensils(recipe, input){
-    if(recipe.ustensils.find((ustens) => ustens.toLocaleLowerCase().includes(input.toLocaleLowerCase()) && ustens.length === input.length))
-    return true;
+  }
+  
+  function findUstensils(recipe, input) {
+    if (recipe.ustensils.find((usten) => usten.toLocaleLowerCase().includes(input.toLocaleLowerCase()) && usten.length === input.length))
+      return true;
     return false;
-}
+  }
+  
 
-export{inputContainer, ingredientContainer, applianceContainer, ustensilContainer, recipeContainer, findIngredients, findIngredientsOpen, findUstensils};
+  const inputContainer = [];
+  const ingredientContainer = [];
+  const applianceContainer = [];
+  const ustensilContainer = [];
+  const recipeContainer = [];
+  
+  export { inputContainer, ingredientContainer, applianceContainer, ustensilContainer, recipeContainer, findIngredients, findOpenedIngredients, findUstensils };
+  

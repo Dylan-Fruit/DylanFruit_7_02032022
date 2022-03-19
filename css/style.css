@@ -11,6 +11,8 @@
   border: none;
   padding: 10px;
   font-size: 18px;
+  font-family: "Lato";
+  font-weight: 400;
 }
 .mainsearch_search-label {
   position: absolute;
@@ -18,8 +20,16 @@
   right: 19%;
 }
 
+#research::placeholder {
+  opacity: 0.25;
+}
+
 .no-result {
   display: none;
+  font-family: "DM Sans";
+  font-size: 25px;
+  color: #D04F4F;
+  margin-top: 25px;
 }
 
 .secondarysearch {
@@ -29,7 +39,58 @@
 }
 
 .recipeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 10px;
+  margin-top: 23px;
+}
+.recipeTags_ingredient {
+  background-color: #3282f7;
+  position: relative;
   display: none;
+  cursor: pointer;
+  font-family: "lato";
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 55px 10.5px 20px;
+}
+.recipeTags_ingredient-button {
+  position: absolute;
+  right: 22px;
+  cursor: pointer;
+}
+.recipeTags_device {
+  background-color: #68D9A4;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  font-family: "lato";
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 55px 10.5px 20px;
+}
+.recipeTags_device-button {
+  position: absolute;
+  right: 22px;
+  cursor: pointer;
+}
+.recipeTags_ustensils {
+  background-color: #ED6454;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  font-family: "lato";
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 55px 10.5px 20px;
+}
+.recipeTags_ustensils-button {
+  position: absolute;
+  right: 22px;
+  cursor: pointer;
 }
 
 .test {
@@ -74,9 +135,9 @@
   flex-wrap: wrap;
   max-height: 250px;
   overflow: scroll;
-  margin-top: 20px;
+  margin-top: 19px;
   position: absolute;
-  max-width: 667px;
+  width: 667px;
   border-radius: 0 0 5px 5px;
   padding: 13px;
   column-gap: 50px;
@@ -86,7 +147,6 @@
 .search_ingredient-combox-list li {
   display: block;
   width: 180px;
-  height: 35px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -127,9 +187,9 @@
   flex-wrap: wrap;
   max-height: 250px;
   overflow: scroll;
-  margin-top: 20px;
+  margin-top: 19px;
   position: absolute;
-  max-width: 667px;
+  width: 667px;
   border-radius: 0 0 5px 5px;
   padding: 13px;
   column-gap: 50px;
@@ -139,7 +199,6 @@
 .search_device-combox-list li {
   display: block;
   width: 180px;
-  height: 35px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -180,9 +239,9 @@
   flex-wrap: wrap;
   max-height: 250px;
   overflow: scroll;
-  margin-top: 20px;
+  margin-top: 19px;
   position: absolute;
-  max-width: 667px;
+  width: 667px;
   border-radius: 0 0 5px 5px;
   padding: 13px;
   column-gap: 50px;
@@ -192,7 +251,6 @@
 .search_ustensils-combox-list li {
   display: block;
   width: 180px;
-  height: 35px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

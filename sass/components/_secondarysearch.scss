@@ -5,7 +5,22 @@
 }
 
 .recipeTags {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+    margin-top: 23px;
+    &_ingredient {
+        background-color: $ingredient-color;
+        @include tagsProperties;
+    }
+    &_device {
+        background-color: $device-color;
+        @include tagsProperties;
+    }
+    &_ustensils {
+        background-color: $ustensils-color;
+        @include tagsProperties;
+    }
 }
 
 .test {

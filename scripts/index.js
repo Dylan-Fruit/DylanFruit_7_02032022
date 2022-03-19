@@ -1,8 +1,8 @@
 import displayList from "./utils/displayList.js";
+import search from "./utils/search.js";
 import recipes from "./data/recipe.js";
-import recipeFactory from "./factory/recipeFactory.js";
-import mainSearch from "./utils/search.js";
 import listAndTags from "./factory/listandtags.js";
+import recipeFactory from "./factory/recipeFactory.js";
 
 function init() {
     displayList();
@@ -10,9 +10,8 @@ function init() {
     listAndTags(recipes);
 
     recipes.forEach((recipe) => recipeFactory(recipe));
-
 }
 
 init();
 
-mainSearch(recipes);
+search(recipes);

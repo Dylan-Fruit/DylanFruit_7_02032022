@@ -23,6 +23,10 @@
     width: 65%;
     border: none;
     outline: none;
+    &::placeholder {
+        color: #FFF;
+        opacity: 0.5;
+    }
 }
 
 @mixin searchComboxProperties {

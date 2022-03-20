@@ -273,6 +273,10 @@
   border: none;
   outline: none;
 }
+#ingredient::placeholder {
+  color: #FFF;
+  opacity: 0.5;
+}
 
 #device {
   background-color: #68D9A4;
@@ -286,6 +290,10 @@
   border: none;
   outline: none;
 }
+#device::placeholder {
+  color: #FFF;
+  opacity: 0.5;
+}
 
 #ustensils {
   background-color: #ED6454;
@@ -298,6 +306,10 @@
   width: 65%;
   border: none;
   outline: none;
+}
+#ustensils::placeholder {
+  color: #FFF;
+  opacity: 0.5;
 }
 
 .displayrecipe {

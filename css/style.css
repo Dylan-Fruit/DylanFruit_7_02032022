@@ -330,6 +330,13 @@
   background-color: #C7BEBE;
   border-radius: 5px 5px 0 0;
 }
+.displayrecipe_recipecard-media-img {
+  object-fit: cover;
+  width: 380px;
+  height: 178px;
+  background-color: #C7BEBE;
+  border-radius: 5px 5px 0 0;
+}
 .displayrecipe_recipecard-description {
   background-color: #E7E7E7;
   border-radius: 0 0 5px 5px;

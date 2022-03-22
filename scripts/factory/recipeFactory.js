@@ -7,7 +7,14 @@ export default function recipeFactory(recipe) {
     displayRecipe.appendChild(recipeCard);
 
     const recipeCardMedia = document.createElement("div");
+    let recipeCardMediaName = "";
+    recipeCardMediaName = recipe.name;
+    recipeCardMediaName = recipeCardMediaName.replace(/,/g, '');
+    recipeCardMediaName = recipeCardMediaName.replace(/'/g, ' ');
+    recipeCardMediaName = recipeCardMediaName.replace(/ /g, '-');
+    recipeCardMediaName = recipeCardMediaName.trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036F\u1DC0-\u1DFF\u1AB0-\u1AFF]+/g, '');
     recipeCardMedia.setAttribute("class", "displayrecipe_recipecard-media");
+    recipeCardMedia.innerHTML = `<img src="./assets/images/${recipeCardMediaName}.jpg" class="displayrecipe_recipecard-media-img" alt="${recipe.name}" />`;
     recipeCard.appendChild(recipeCardMedia);
 
     const recipeCardDescription = document.createElement("div");

@@ -34,6 +34,7 @@ export default function displayList(){
         chevron.style.transform = "none";
     }; 
 
+    // Appel des éléments dans le DOM pour l'affichage des listes 
     const containers = [
         document.querySelector('.search_ingredient'),
         document.querySelector('.search_device'),
@@ -97,6 +98,24 @@ export default function displayList(){
         toggleUstensils();
     });
 
+    // Ferme la liste ouverte au clic de l'input principal 
+    const mainSearch = document.getElementById("research");
+
+    mainSearch.addEventListener("click", () => {
+        if(containersList[0].style.display = "flex"){
+            hideList("ingredient");
+        }
+    });
+    mainSearch.addEventListener("click", () => {
+        if(containersList[1].style.display = "flex"){
+            hideList("device");
+        }
+    });
+    mainSearch.addEventListener("click", () => {
+        if(containersList[2].style.display = "flex"){
+            hideList("ustensils");
+        }
+    });
 }
 
 

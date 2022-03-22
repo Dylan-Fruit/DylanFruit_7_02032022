@@ -1,19 +1,22 @@
 import { findIngredients, findUstensils, recipeContainer } from "./secondarysearch.js";
 
+// Cache toutes les listes en fonction de la recherche dans l'input principal
 function resetLists() {
     const AllListItem = document.querySelectorAll(
         ".ingredient-list,.device-list,.ustensils-list"
     );
 
     const AllListItemArray = Array.from(AllListItem);
+    console.log(AllListItemArray);
 
     AllListItemArray.forEach((element) => {
         const object = element;
-
+        console.log(object)
         object.style.display = "none";
     });
 }
 
+// Affichage des tags correspondants à la recherche dans l'input de la combobox
 function updateListViaSearchInput(input, type) {
     const list = document.querySelectorAll(`.${type}-list`);
     const listArray = Array.from(list);
@@ -27,6 +30,7 @@ function updateListViaSearchInput(input, type) {
     });
 }
 
+// Affichage de la liste mis à jour par la sélection de recettes 
 function updateLists(recipe) {
     const ingredientList = document.querySelectorAll(".ingredient-list");
     const deviceList = document.querySelectorAll(".device-list");
@@ -64,6 +68,7 @@ function updateLists(recipe) {
     });
 }
 
+// Fonction d'affichage des tags 
 function displayTags(type, dataOnClick) {
     const existingTag = document.getElementsByClassName(`recipeTags_${type}`);
 
@@ -76,6 +81,8 @@ function displayTags(type, dataOnClick) {
         }
     });
 }
+
+// Fonction de retrait des tags
 function removeTags(element, box) {
     const object = element;
     object.parentElement.style.display = "none";

@@ -1,3 +1,4 @@
+// Affichage des toutes les recettes dans le DOM 
 export default function recipeFactory(recipe) {
     const displayRecipe = document.querySelector(".displayrecipe");
 

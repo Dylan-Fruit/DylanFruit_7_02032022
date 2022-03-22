@@ -1,3 +1,4 @@
+// Création du conteneur html dans le DOM pour les tags 
 const createTag = (type, category) => {
     const recipeTags = document.querySelector(".recipeTags");
     const spanTag = document.createElement("span"); 
@@ -11,6 +12,7 @@ const createTag = (type, category) => {
     recipeTags.appendChild(spanTag);
 };
 
+// Création du conteneur html dans le DOM pour la liste des tags 
 const createList = (type, category) => {
     
     const list = document.createElement("li");
@@ -20,6 +22,7 @@ const createList = (type, category) => {
     listContainer.appendChild(list);
 };
 
+// Affichage de tous les tags dans les listes d'ingrédients, appareils et ustensils
 export default function listAndTags(recipes){
     const totalAppliance = [];
     const totalUstensils = [];

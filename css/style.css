@@ -509,7 +509,7 @@
     column-gap: 29px;
   }
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1400px) and (max-width: 1440px) {
   .displayrecipe {
     column-gap: 42px;
   }

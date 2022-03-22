@@ -150,11 +150,39 @@
   background-color: #3282f7;
 }
 .search_ingredient-combox-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 31px none #ffffff;
+  border-radius: 5px;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-thumb:active {
+  background: #a3a3a3;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-track {
   display: none;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+.search_ingredient-combox-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
 .search_ingredient-combox-list li {
   display: block;
-  width: 180px;
+  width: 175px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -205,11 +233,39 @@
   background-color: #68D9A4;
 }
 .search_device-combox-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.search_device-combox-list::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.search_device-combox-list::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 31px none #ffffff;
+  border-radius: 5px;
+}
+.search_device-combox-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.search_device-combox-list::-webkit-scrollbar-thumb:active {
+  background: #a3a3a3;
+}
+.search_device-combox-list::-webkit-scrollbar-track {
   display: none;
+}
+.search_device-combox-list::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+.search_device-combox-list::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+.search_device-combox-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
 .search_device-combox-list li {
   display: block;
-  width: 180px;
+  width: 175px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -260,11 +316,39 @@
   background-color: #ED6454;
 }
 .search_ustensils-combox-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 31px none #ffffff;
+  border-radius: 5px;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-thumb:active {
+  background: #a3a3a3;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-track {
   display: none;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+.search_ustensils-combox-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
 .search_ustensils-combox-list li {
   display: block;
-  width: 180px;
+  width: 175px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -389,12 +473,45 @@
   overflow-y: scroll;
 }
 .displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-thumb {
+  background: #8a8a8a;
+  border: 31px none #ffffff;
+  border-radius: 5px;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-thumb:active {
+  background: #a3a3a3;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-track {
   display: none;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 @media only screen and (max-width: 1399px) {
   .displayrecipe {
     column-gap: 29px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .displayrecipe {
+    column-gap: 42px;
   }
 }
 *,

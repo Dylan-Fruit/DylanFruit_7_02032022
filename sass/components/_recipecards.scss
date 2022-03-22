@@ -62,7 +62,35 @@
                 font-family: "Roboto";
                 overflow-y: scroll;
                 &::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                }
+                &::-webkit-scrollbar-button {
+                    width: 0px;
+                    height: 0px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #8a8a8a;
+                    border: 31px none #ffffff;
+                    border-radius: 5px;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #a1a1a1;
+                }
+                &::-webkit-scrollbar-thumb:active {
+                    background: #a3a3a3;
+                }
+                &::-webkit-scrollbar-track {
                     display: none;
+                }
+                &::-webkit-scrollbar-track:hover {
+                    background: #f2f2f2;
+                }
+                &::-webkit-scrollbar-track:active {
+                    background: #f5f5f5;
+                }
+                &::-webkit-scrollbar-corner {
+                    background: transparent;
                 }
             }
         }
@@ -73,4 +101,10 @@
     .displayrecipe {
         column-gap: 29px;
     } 
+}
+
+@media only screen and (max-width: 1440px){
+    .displayrecipe {
+        column-gap: 42px;
+    }
 }

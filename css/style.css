@@ -379,6 +379,9 @@
   font-family: "Roboto";
   overflow-y: scroll;
 }
+.displayrecipe_recipecard-subdescription-desc::-webkit-scrollbar {
+  display: none;
+}
 
 @media only screen and (max-width: 1399px) {
   .displayrecipe {

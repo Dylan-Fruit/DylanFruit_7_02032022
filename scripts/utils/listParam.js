@@ -11,7 +11,6 @@ function resetLists() {
 
     AllListItemArray.forEach((element) => {
         const object = element;
-        console.log(object)
         object.style.display = "none";
     });
 }

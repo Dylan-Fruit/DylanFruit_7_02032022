@@ -149,6 +149,9 @@
   row-gap: 10px;
   background-color: #3282f7;
 }
+.search_ingredient-combox-list::-webkit-scrollbar {
+  display: none;
+}
 .search_ingredient-combox-list li {
   display: block;
   width: 180px;
@@ -201,6 +204,9 @@
   row-gap: 10px;
   background-color: #68D9A4;
 }
+.search_device-combox-list::-webkit-scrollbar {
+  display: none;
+}
 .search_device-combox-list li {
   display: block;
   width: 180px;
@@ -252,6 +258,9 @@
   column-gap: 50px;
   row-gap: 10px;
   background-color: #ED6454;
+}
+.search_ustensils-combox-list::-webkit-scrollbar {
+  display: none;
 }
 .search_ustensils-combox-list li {
   display: block;

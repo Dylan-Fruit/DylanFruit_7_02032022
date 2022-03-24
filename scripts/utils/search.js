@@ -9,14 +9,18 @@ export default function search(recipe){
         const mainSearch = document.getElementById("research");
         const input = mainSearch.value;
 
-        // Condition pour vérifier le nombre de caractères tapés dans l'input & recherche de recettes correspondantes
-        if(input.length >= 3) {
+        // Condition pour vérifier le nombre de caractères tapés dans l'input & recherche de recettes correspondantes avec une boucle for 
+        if(input.length >= 3){
             inputContainer.push(input);
 
             let totalResult = [];
 
-            totalResult = recipe.filter((recipe) => recipe.name.toLocaleLowerCase().includes(input.toLocaleLowerCase()) || findOpenedIngredients(recipe, input) || recipe.description.toLocaleLowerCase().includes(input.toLocaleLowerCase()));
-            console.log(totalResult);
+            for(let i = 0; i < recipe.length; i += 1){
+                if(recipe[i].name.toLocaleLowerCase().includes(input.toLocaleLowerCase()) || findOpenedIngredients(recipe[i], input) || recipe[i].description.toLocaleLowerCase().includes(input.toLocaleLowerCase())){
+                    totalResult.push(recipe[i]);
+                }
+            }
+
             let uniqueResult = [];
             uniqueResult = [...new Set(totalResult)];
 

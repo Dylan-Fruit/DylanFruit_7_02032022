@@ -9,7 +9,7 @@ export default function search(recipe){
         const mainSearch = document.getElementById("research");
         const input = mainSearch.value;
 
-        // Condition pour vérifier le nombre de caractères tapés dans l'input & recherche de recettes correspondantes
+        // Condition pour vérifier le nombre de caractères tapés dans l'input & recherche de recettes correspondantes avec fonction filter
         if(input.length >= 3) {
             inputContainer.push(input);
 

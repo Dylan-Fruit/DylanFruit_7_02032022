@@ -25,7 +25,6 @@ import { updateListViaSearchInput, displayTags, removeTags } from "./listParam.j
     // Affichage d'une bordure de la couleur du logo au focus dans l'input
     const mainSearch = document.getElementById("research");
     const mainSearchSvg = document.querySelector(".mainsearch_search-label svg path");
-    console.log(mainSearchSvg);
   
     mainSearch.addEventListener("focusin", () => {
       mainSearch.style.outline = "#D04F4F solid 3px";

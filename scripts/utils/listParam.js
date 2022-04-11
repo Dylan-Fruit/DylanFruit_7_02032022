@@ -7,7 +7,6 @@ function resetLists() {
     );
 
     const AllListItemArray = Array.from(AllListItem);
-    console.log(AllListItemArray);
 
     AllListItemArray.forEach((element) => {
         const object = element;

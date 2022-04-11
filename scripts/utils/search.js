@@ -16,7 +16,6 @@ export default function search(recipe){
             let totalResult = [];
 
             totalResult = recipe.filter((recipe) => recipe.name.toLocaleLowerCase().includes(input.toLocaleLowerCase()) || findOpenedIngredients(recipe, input) || recipe.description.toLocaleLowerCase().includes(input.toLocaleLowerCase()));
-            console.log(totalResult);
             let uniqueResult = [];
             uniqueResult = [...new Set(totalResult)];
 

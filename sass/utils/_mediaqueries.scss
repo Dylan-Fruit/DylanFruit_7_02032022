@@ -1,0 +1,59 @@
+@media screen and(max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+
+  .mainsearch {
+    margin: 0;
+    &_research-bar {
+      &::placeholder {
+        overflow: ellipsis;
+      }
+    }
+    &_search-label {
+      display: none;
+    }
+  }
+  .secondarysearch {
+    flex-direction: column;
+    margin-bottom: 30px;
+    row-gap: 20px;
+    width: 100%;
+  }
+  .recipeTags {
+    margin: 23px 0px 20px 0px;
+    &_ingredient,
+    &_device,
+    &_ustensils {
+      &-button {
+        top: 10px;
+      }
+    }
+  }
+
+  .search {
+    &_ingredient,
+    &_device,
+    &_ustensils {
+      width: 100%;
+      &-combox-list {
+        width: 100%;
+      }
+    }
+  }
+
+  .displayrecipe {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &_recipecard {
+      width: 100%;
+      &-media {
+        width: 100%;
+        &-img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

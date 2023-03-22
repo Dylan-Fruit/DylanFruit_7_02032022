@@ -1,75 +1,79 @@
 .secondarysearch {
-    display: flex;
-    column-gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+  margin-top: 30px;
 }
 
 .recipeTags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px 10px;
-    margin-top: 23px;
-    &_ingredient {
-        background-color: $ingredient-color;
-        @include tagsProperties;
-    }
-    &_device {
-        background-color: $device-color;
-        @include tagsProperties;
-    }
-    &_ustensils {
-        background-color: $ustensils-color;
-        @include tagsProperties;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 10px;
+  margin-top: 23px;
+  &_ingredient {
+    background-color: $ingredient-color;
+    @include tagsProperties;
+  }
+  &_device {
+    background-color: $device-color;
+    @include tagsProperties;
+  }
+  &_ustensils {
+    background-color: $ustensils-color;
+    @include tagsProperties;
+  }
 }
 
 .test {
-    overflow: initial;
-    text-overflow: initial;
-    white-space: normal;
+  overflow: initial;
+  text-overflow: initial;
+  white-space: normal;
 }
 
 .search {
-    &_ingredient {
-        @include searchCombox;
-        @include searchComboxProperties;
-        background-color: $ingredient-color;
-        &-combox-list{
-            @include searchComboxList;
-            background-color: $ingredient-color;
-        }
+  &_ingredient {
+    @include searchCombox;
+    @include searchComboxProperties;
+    background-color: $ingredient-color;
+    z-index: 3;
+    &-combox-list {
+      @include searchComboxList;
+      background-color: $ingredient-color;
     }
-    &_device {
-        @include searchCombox;
-        @include searchComboxProperties;
-        background-color: $device-color;
-        &-combox-list {
-            @include searchComboxList;
-            background-color: $device-color;
-        }
+  }
+  &_device {
+    @include searchCombox;
+    @include searchComboxProperties;
+    background-color: $device-color;
+    z-index: 2;
+    &-combox-list {
+      @include searchComboxList;
+      background-color: $device-color;
     }
-    &_ustensils {
-        @include searchCombox;
-        @include searchComboxProperties;
-        background-color: $ustensils-color;
-        &-combox-list {
-            @include searchComboxList;
-            background-color: $ustensils-color;
-        }
+  }
+  &_ustensils {
+    @include searchCombox;
+    @include searchComboxProperties;
+    background-color: $ustensils-color;
+    z-index: 1;
+    &-combox-list {
+      @include searchComboxList;
+      background-color: $ustensils-color;
     }
+  }
 }
 
 #ingredient {
-    background-color: $ingredient-color;
-    @include searchComboxInput;
+  background-color: $ingredient-color;
+  @include searchComboxInput;
 }
 
 #device {
-    background-color: $device-color;
-    @include searchComboxInput;
+  background-color: $device-color;
+  @include searchComboxInput;
 }
 
 #ustensils {
-    background-color: $ustensils-color;
-    @include searchComboxInput;
+  background-color: $ustensils-color;
+  @include searchComboxInput;
 }

@@ -1,118 +1,117 @@
 @mixin searchCombox {
-    border-radius: 5px;
-    display: flex;
-    width: 170px;
-    height: 69px;
-    font-family: "lato";
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    cursor: pointer;
-    align-items: center;
-    position: relative;
-    z-index: 99;
+  border-radius: 5px;
+  display: flex;
+  width: 170px;
+  height: 69px;
+  font-family: "lato";
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
 }
 
 @mixin searchComboxInput {
-    font-family: "lato";
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    display: none;
-    margin: 0 25px 0 15px;
-    width: 65%;
-    border: none;
-    outline: none;
-    &::placeholder {
-        color: #FFF;
-        opacity: 0.5;
-    }
+  font-family: "lato";
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: none;
+  margin: 0 25px 0 15px;
+  width: 65%;
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
 }
 
 @mixin searchComboxProperties {
-    &-combox {
-        width: 100%;
-        &-searchfield {
-            position: relative;
-            &-chevron {
-                position: absolute;
-                top: 5px;
-                right: 18px;
-            }
-        }
-        &-searchfieldLabel {
-            cursor: text;
-            margin: 0 25px 0 15px;
-        }
+  &-combox {
+    width: 100%;
+    &-searchfield {
+      position: relative;
+      &-chevron {
+        position: absolute;
+        top: 5px;
+        right: 18px;
+      }
     }
+    &-searchfieldLabel {
+      cursor: text;
+      margin: 0 25px 0 15px;
+    }
+  }
 }
 
 @mixin searchComboxList {
-            display: none;
-            height: 300px;
-            flex-wrap: wrap;
-            max-height: 250px;
-            overflow: scroll;
-            margin-top: 19px;
-            position: absolute;
-            width: 667px;
-            border-radius: 0 0 5px 5px;
-            padding: 13px;
-            column-gap: 50px;
-            row-gap: 10px;
-            &::-webkit-scrollbar {
-                width: 5px;
-                height: 5px;
-            }
-            &::-webkit-scrollbar-button {
-                width: 0px;
-                height: 0px;
-            }
-            &::-webkit-scrollbar-thumb {
-                background: #e1e1e1;
-                border: 31px none #ffffff;
-                border-radius: 5px;
-            }
-            &::-webkit-scrollbar-thumb:hover {
-                background: #a1a1a1;
-            }
-            &::-webkit-scrollbar-thumb:active {
-                background: #a3a3a3;
-            }
-            &::-webkit-scrollbar-track {
-                display: none;
-            }
-            &::-webkit-scrollbar-track:hover {
-                background: #f2f2f2;
-            }
-            &::-webkit-scrollbar-track:active {
-                background: #f5f5f5;
-            }
-            &::-webkit-scrollbar-corner {
-                background: transparent;
-            }
-           
-            li {
-                display: block;
-                width: 175px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
+  display: none;
+  height: 300px;
+  flex-wrap: wrap;
+  max-height: 250px;
+  overflow: scroll;
+  margin-top: 19px;
+  position: absolute;
+  width: 667px;
+  border-radius: 0 0 5px 5px;
+  padding: 13px;
+  column-gap: 50px;
+  row-gap: 10px;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 31px none #ffffff;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: #a3a3a3;
+  }
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: #f2f2f2;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: #f5f5f5;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  li {
+    display: block;
+    width: 175px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 @mixin tagsProperties {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  font-family: "lato";
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 55px 10.5px 20px;
+  &-button {
+    position: absolute;
+    right: 22px;
     cursor: pointer;
-    font-family: "lato";
-    font-size: 14px;
-    color: #FFF;
-    border-radius: 5px;
-    padding: 10px 55px 10.5px 20px;
-    &-button {
-        position: absolute;
-        right: 22px;
-        cursor: pointer;
-    }
+  }
 }
